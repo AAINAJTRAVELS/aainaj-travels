@@ -1,110 +1,628 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Aainaj Travels | Taxi Service in Kutch</title>
-<meta name="description" content="Aainaj Travels provides reliable taxi services in Gandhidham, Bhuj, Mundra, Adipur and Anjar.">
+
+<meta name="description" content="Aainaj Travels provides reliable local, outstation and airport taxi services in Gandhidham, Bhuj, Mundra, Adipur and Anjar.">
+
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:Arial,Helvetica,sans-serif;color:#17202a;background:#fff;line-height:1.6}
-header{background:#111827;color:#fff;padding:16px 6%;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:10}
-.logo{font-size:24px;font-weight:800}.logo span{color:#fbbf24}
-nav a{color:#fff;text-decoration:none;margin-left:22px;font-weight:600}
-.hero{background:linear-gradient(120deg,#111827,#374151);color:#fff;padding:80px 6%;display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center}
-.hero h1{font-size:clamp(38px,6vw,64px);line-height:1.05;margin-bottom:20px}
-.hero p{font-size:20px;color:#e5e7eb;margin-bottom:28px}
-.btn{display:inline-block;background:#fbbf24;color:#111827;padding:14px 24px;border-radius:10px;text-decoration:none;font-weight:800;margin-right:10px}
-.btn.dark{background:#fff}
-.hero img{width:100%;max-height:430px;object-fit:cover;border-radius:20px;box-shadow:0 20px 50px #0006}
-section{padding:65px 6%}.title{text-align:center;margin-bottom:38px}.title h2{font-size:36px}.title p{color:#6b7280}
-.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
-.card{padding:28px;border:1px solid #e5e7eb;border-radius:16px;background:#fff;box-shadow:0 8px 25px #0000000b}
-.card .icon{font-size:32px;margin-bottom:12px}.card h3{margin-bottom:8px}
-.fleet{display:grid;grid-template-columns:repeat(2,1fr);gap:30px;align-items:center;background:#f8fafc}
-.fleet img{width:100%;border-radius:18px}.fleet ul{list-style:none;margin-top:18px}.fleet li{margin:10px 0}
-.contact{background:#111827;color:#fff}.contactbox{max-width:850px;margin:auto;text-align:center}.contactbox p{color:#d1d5db;margin:10px 0 25px}
-footer{background:#0b1220;color:#9ca3af;text-align:center;padding:22px}
-@media(max-width:800px){nav{display:none}.hero{grid-template-columns:1fr;padding-top:55px}.cards{grid-template-columns:1fr 1fr}.fleet{grid-template-columns:1fr}}
-@media(max-width:500px){.cards{grid-template-columns:1fr}.hero h1{font-size:42px}section{padding:48px 5%}}
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:Arial,Helvetica,sans-serif;
+  color:#17202a;
+  background:#fff;
+  line-height:1.6;
+}
+
+/* HEADER */
+header{
+  background:#0b1220;
+  color:#fff;
+  padding:15px 6%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  position:sticky;
+  top:0;
+  z-index:100;
+  box-shadow:0 4px 20px #0004;
+}
+
+.logo{
+  font-size:25px;
+  font-weight:900;
+}
+
+.logo span{
+  color:#fbbf24;
+}
+
+nav a{
+  color:#fff;
+  text-decoration:none;
+  margin-left:22px;
+  font-weight:700;
+}
+
+/* HERO */
+.hero{
+  background:
+    linear-gradient(120deg,#080d18ee,#1f2937dd),
+    url("car.jpg") center/cover;
+  color:#fff;
+  padding:90px 6%;
+  display:grid;
+  grid-template-columns:1.15fr .85fr;
+  gap:45px;
+  align-items:center;
+}
+
+.hero-tag{
+  color:#fbbf24;
+  font-weight:900;
+  letter-spacing:1px;
+  margin-bottom:12px;
+}
+
+.hero h1{
+  font-size:clamp(40px,6vw,68px);
+  line-height:1.05;
+  margin-bottom:20px;
+}
+
+.hero p{
+  font-size:20px;
+  color:#e5e7eb;
+  margin-bottom:28px;
+  max-width:650px;
+}
+
+.hero img{
+  width:100%;
+  max-height:430px;
+  object-fit:cover;
+  border-radius:24px;
+  border:3px solid #ffffff22;
+  box-shadow:0 25px 60px #0008;
+}
+
+/* BUTTONS */
+.btn{
+  display:inline-block;
+  background:#fbbf24;
+  color:#111827;
+  padding:14px 24px;
+  border-radius:10px;
+  text-decoration:none;
+  font-weight:900;
+  margin:5px 8px 5px 0;
+  transition:.2s;
+}
+
+.btn:hover{
+  transform:translateY(-2px);
+}
+
+.btn.dark{
+  background:#fff;
+}
+
+/* SECTIONS */
+section{
+  padding:75px 6%;
+}
+
+.title{
+  text-align:center;
+  margin-bottom:42px;
+}
+
+.title h2{
+  font-size:38px;
+  margin-bottom:8px;
+}
+
+.title p{
+  color:#6b7280;
+}
+
+/* SERVICES */
+.cards{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:22px;
+}
+
+.card{
+  padding:30px 24px;
+  border:1px solid #e5e7eb;
+  border-radius:18px;
+  background:#fff;
+  box-shadow:0 10px 30px #0000000c;
+  transition:.2s;
+}
+
+.card:hover{
+  transform:translateY(-5px);
+  box-shadow:0 15px 35px #0002;
+}
+
+.card .icon{
+  font-size:38px;
+  margin-bottom:15px;
+}
+
+.card h3{
+  margin-bottom:8px;
+  font-size:21px;
+}
+
+.card p{
+  color:#6b7280;
+}
+
+/* WHY CHOOSE US */
+.why{
+  background:#f8fafc;
+}
+
+.why-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:22px;
+}
+
+.why-box{
+  background:#fff;
+  padding:28px;
+  border-radius:18px;
+  border:1px solid #e5e7eb;
+}
+
+.why-box h3{
+  margin-bottom:8px;
+}
+
+.why-box p{
+  color:#6b7280;
+}
+
+/* FLEET */
+.fleet{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:45px;
+  align-items:center;
+  background:#fff;
+}
+
+.fleet img{
+  width:100%;
+  border-radius:22px;
+  box-shadow:0 15px 40px #0002;
+}
+
+.small-title{
+  color:#b45309;
+  font-weight:900;
+  letter-spacing:1px;
+}
+
+.fleet h2{
+  font-size:40px;
+  margin:8px 0 15px;
+}
+
+.fleet ul{
+  list-style:none;
+  margin-top:20px;
+}
+
+.fleet li{
+  margin:12px 0;
+  font-weight:700;
+}
+
+/* AREAS */
+.area-card{
+  text-align:center;
+}
+
+/* CONTACT */
+.contact{
+  background:linear-gradient(135deg,#0b1220,#1f2937);
+  color:#fff;
+}
+
+.contactbox{
+  max-width:850px;
+  margin:auto;
+  text-align:center;
+}
+
+.contactbox h2{
+  font-size:42px;
+  margin-bottom:10px;
+}
+
+.contactbox p{
+  color:#d1d5db;
+  margin-bottom:25px;
+}
+
+/* FOOTER */
+footer{
+  background:#070c15;
+  color:#9ca3af;
+  text-align:center;
+  padding:25px 15px 85px;
+}
+
+/* FLOATING BUTTONS */
+.float-buttons{
+  position:fixed;
+  bottom:18px;
+  right:18px;
+  display:flex;
+  gap:10px;
+  z-index:200;
+}
+
+.float-buttons a{
+  text-decoration:none;
+  color:#fff;
+  font-weight:900;
+  padding:12px 16px;
+  border-radius:50px;
+  box-shadow:0 8px 25px #0004;
+}
+
+.whatsapp{
+  background:#16a34a;
+}
+
+.call{
+  background:#2563eb;
+}
+
+/* MOBILE */
+@media(max-width:800px){
+
+  nav{
+    display:none;
+  }
+
+  .hero{
+    grid-template-columns:1fr;
+    padding:60px 5%;
+  }
+
+  .hero h1{
+    font-size:46px;
+  }
+
+  .cards{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .why-grid{
+    grid-template-columns:1fr;
+  }
+
+  .fleet{
+    grid-template-columns:1fr;
+  }
+
+  section{
+    padding:55px 5%;
+  }
+}
+
+@media(max-width:500px){
+
+  .hero h1{
+    font-size:40px;
+  }
+
+  .hero p{
+    font-size:18px;
+  }
+
+  .cards{
+    grid-template-columns:1fr;
+  }
+
+  .title h2,
+  .fleet h2{
+    font-size:32px;
+  }
+
+  .contactbox h2{
+    font-size:32px;
+  }
+
+  .float-buttons{
+    left:12px;
+    right:12px;
+    justify-content:center;
+  }
+
+  .float-buttons a{
+    flex:1;
+    text-align:center;
+  }
+}
 </style>
 </head>
+
 <body>
 
 <header>
-  <div class="logo">Aainaj <span>Travels</span></div>
+  <div class="logo">
+    Aainaj <span>Travels</span>
+  </div>
+
   <nav>
     <a href="#services">Services</a>
     <a href="#fleet">Our Car</a>
+    <a href="#areas">Areas</a>
     <a href="#contact">Contact</a>
   </nav>
 </header>
 
+
+<!-- HERO -->
 <section class="hero">
+
   <div>
-    <p style="color:#fbbf24;font-weight:800">YOUR TRUSTED TRAVEL PARTNER</p>
-    <h1>Reliable Taxi Service in Kutch</h1>
-    <p>Comfortable and dependable taxi services across Gandhidham, Bhuj, Mundra, Adipur and Anjar.</p>
-    <a class="btn" href="https://wa.me/918141975050">Book a Taxi</a>
-    <a class="btn dark" href="#services">View Services</a>
+    <div class="hero-tag">
+      YOUR TRUSTED TRAVEL PARTNER
+    </div>
+
+    <h1>
+      Reliable Taxi Service in Kutch
+    </h1>
+
+    <p>
+      Comfortable, safe and dependable taxi services
+      across Gandhidham, Bhuj, Mundra, Adipur and Anjar.
+    </p>
+
+    <a class="btn"
+       href="https://wa.me/918141975050?text=Hello%20Aainaj%20Travels%2C%20I%20want%20to%20book%20a%20taxi."
+       target="_blank">
+       💬 Book a Taxi
+    </a>
+
+    <a class="btn dark"
+       href="tel:+918141975050">
+       📞 Call Now
+    </a>
   </div>
-  <div><img src="car.jpg" alt="Aainaj Travels taxi"></div>
+
+  <div>
+    <img src="car.jpg" alt="Aainaj Travels taxi">
+  </div>
+
 </section>
 
+
+<!-- SERVICES -->
 <section id="services">
+
   <div class="title">
     <h2>Our Taxi Services</h2>
-    <p>Convenient travel for local and outstation journeys.</p>
+    <p>Travel comfortably with Aainaj Travels.</p>
   </div>
+
   <div class="cards">
-    <div class="card"><div class="icon">🚕</div><h3>Local Taxi</h3><p>Easy and comfortable rides within your city.</p></div>
-    <div class="card"><div class="icon">🛣️</div><h3>Outstation Taxi</h3><p>Safe and convenient long-distance travel.</p></div>
-    <div class="card"><div class="icon">✈️</div><h3>Airport Transfer</h3><p>Pickup and drop services for a smooth journey.</p></div>
-    <div class="card"><div class="icon">🔄</div><h3>One Way / Round Trip</h3><p>Flexible options according to your travel plan.</p></div>
+
+    <div class="card">
+      <div class="icon">🚕</div>
+      <h3>Local Taxi</h3>
+      <p>
+        Easy and comfortable rides for local travel.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="icon">🛣️</div>
+      <h3>Outstation Taxi</h3>
+      <p>
+        Safe and convenient long-distance journeys.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="icon">✈️</div>
+      <h3>Airport Transfer</h3>
+      <p>
+        Pickup and drop services for a smooth journey.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="icon">🔄</div>
+      <h3>One Way / Round Trip</h3>
+      <p>
+        Flexible travel options for your plans.
+      </p>
+    </div>
+
   </div>
 </section>
 
+
+<!-- WHY CHOOSE US -->
+<section class="why">
+
+  <div class="title">
+    <h2>Why Choose Aainaj Travels?</h2>
+    <p>Reliable service for a comfortable journey.</p>
+  </div>
+
+  <div class="why-grid">
+
+    <div class="why-box">
+      <h3>⭐ Reliable Service</h3>
+      <p>
+        Dependable taxi service with a focus on customer satisfaction.
+      </p>
+    </div>
+
+    <div class="why-box">
+      <h3>🚘 Clean & Comfortable</h3>
+      <p>
+        Well-maintained vehicle for a comfortable travel experience.
+      </p>
+    </div>
+
+    <div class="why-box">
+      <h3>⏰ On-Time Travel</h3>
+      <p>
+        We value your time and aim to provide timely pickup and drop.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- OUR CAR -->
 <section id="fleet" class="fleet">
-  <div><img src="car.jpg" alt="Aainaj Travels Hyundai taxi"></div>
+
   <div>
-    <p style="color:#b45309;font-weight:800">OUR FLEET</p>
-    <h2 style="font-size:36px;margin:8px 0">Comfortable & Clean Taxi</h2>
-    <p>Travel comfortably with Aainaj Travels. Our taxi is suitable for local trips, business travel and outstation journeys.</p>
+    <img src="car.jpg" alt="Aainaj Travels Hyundai taxi">
+  </div>
+
+  <div>
+
+    <div class="small-title">
+      OUR FLEET
+    </div>
+
+    <h2>
+      Comfortable & Clean Taxi
+    </h2>
+
+    <p>
+      Travel comfortably with Aainaj Travels.
+      Our taxi is suitable for local trips,
+      business travel and outstation journeys.
+    </p>
+
     <ul>
       <li>✓ Comfortable seating</li>
       <li>✓ Clean and well-maintained vehicle</li>
       <li>✓ Professional taxi service</li>
       <li>✓ Service across Kutch</li>
     </ul>
+
   </div>
+
 </section>
 
-<section>
+
+<!-- SERVICE AREAS -->
+<section id="areas">
+
   <div class="title">
     <h2>Service Areas</h2>
-    <p>We provide taxi services in and around Kutch.</p>
+    <p>
+      Taxi services available in and around Kutch.
+    </p>
   </div>
+
   <div class="cards">
-    <div class="card"><h3>Gandhidham</h3><p>Local & outstation taxi</p></div>
-    <div class="card"><h3>Bhuj</h3><p>Local & outstation taxi</p></div>
-    <div class="card"><h3>Mundra</h3><p>Local & outstation taxi</p></div>
-    <div class="card"><h3>Adipur & Anjar</h3><p>Local & outstation taxi</p></div>
+
+    <div class="card area-card">
+      <h3>Gandhidham</h3>
+      <p>Local & Outstation Taxi</p>
+    </div>
+
+    <div class="card area-card">
+      <h3>Bhuj</h3>
+      <p>Local & Outstation Taxi</p>
+    </div>
+
+    <div class="card area-card">
+      <h3>Mundra</h3>
+      <p>Local & Outstation Taxi</p>
+    </div>
+
+    <div class="card area-card">
+      <h3>Adipur & Anjar</h3>
+      <p>Local & Outstation Taxi</p>
+    </div>
+
   </div>
+
 </section>
 
+
+<!-- CONTACT -->
 <section id="contact" class="contact">
+
   <div class="contactbox">
-    <h2 style="font-size:38px">Book Your Taxi Today</h2>
-    <p>Call or WhatsApp Aainaj Travels for availability, fare and booking.</p>
-    <!-- Replace the number below with your WhatsApp number, including country code -->
-    <a class="btn" href="https://wa.me/91XXXXXXXXXX?text=Hello%20Aainaj%20Travels,%20I%20want%20to%20book%20a%20taxi." target="_blank">WhatsApp Us</a>
-    <a class="btn dark" href="tel:+918141975050">Call Now</a>
+
+    <h2>
+      Book Your Taxi Today
+    </h2>
+
+    <p>
+      Call or WhatsApp Aainaj Travels for
+      availability, fare and booking.
+    </p>
+
+    <a class="btn"
+       href="https://wa.me/918141975050?text=Hello%20Aainaj%20Travels%2C%20I%20want%20to%20book%20a%20taxi."
+       target="_blank">
+       💬 WhatsApp Us
+    </a>
+
+    <a class="btn dark"
+       href="tel:+918141975050">
+       📞 Call Now
+    </a>
+
   </div>
+
 </section>
+
 
 <footer>
   © 2026 Aainaj Travels. All Rights Reserved.
 </footer>
+
+
+<!-- FLOATING CONTACT BUTTONS -->
+<div class="float-buttons">
+
+  <a class="whatsapp"
+     href="https://wa.me/918141975050?text=Hello%20Aainaj%20Travels%2C%20I%20want%20to%20book%20a%20taxi."
+     target="_blank">
+     💬 WhatsApp
+  </a>
+
+  <a class="call"
+     href="tel:+918141975050">
+     📞 Call
+  </a>
+
+</div>
 
 </body>
 </html>
